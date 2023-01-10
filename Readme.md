@@ -247,7 +247,9 @@ To add an SSH key to your user account:
 #### 6. Check that your SSH authentication works.
 To test that the SSH key was added successfully, open a terminal on your device and run the following command:
 
-`ssh -T git@bitbucket.org`
+```
+ssh -T git@bitbucket.org
+```
 If SSH can successfully connect with Bitbucket using your SSH keys, the command will produce output similar to:
 > authenticated via ssh key.
 >
