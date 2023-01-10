@@ -219,6 +219,16 @@ Host bitbucket.org
   IdentityFile ~/.ssh/{ssh-key-name}
 ```
 > Where {ssh-key-name} is the location of the private key file once it has been added to the ssh-agent.
+
+> For git repo if Error as below 
+```
+The authenticity of host 'github.com (140.82.113.4)' can't be established.
+```
+> Fix as below
+```
+ssh-keyscan github.com >> ~/.ssh/known_hosts
+```
+
 #### 5. Provide Bitbucket Cloud with your public key.
 To add an SSH key to your user account:
 
