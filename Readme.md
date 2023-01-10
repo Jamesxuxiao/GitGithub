@@ -187,7 +187,7 @@ To create an SSH key pair:
 
 - Open a terminal and navigate to your home or user directory using cd, for example:
 
-`cd ~`
+`cd ~/.ssh`
 - Generate a SSH key pair using ssh-keygen, such as:
 
 `ssh-keygen -t ed25519 -b 4096 -C "{username@emaildomain.com}" -f {ssh-key-name}`
@@ -203,14 +203,14 @@ Once complete, ssh-keygen will output two files:
 
 - {ssh-key-name}.pub — the public key.
 
-These files will be stored in your user folder, such as C:\Users\<username>\<ssh-key-name>.
+These files will be stored in your user folder, such as C:\Users\<username>\.ssh\<ssh-key-name>.
 
 #### 4. Add your key to the SSH agent.
 To add the SSH key to your SSH agent (ssh-agent):
 
 - Run the following command, replacing the {ssh-key-name} with the name of the private key:
 
-`ssh-add ~/{ssh-key-name}`
+`ssh-add ~/.ssh/{ssh-key-name}`
 To ensure the correct SSH key is used when connecting to Bitbucket, update or create your SSH configuration file (~/.ssh/config) with the following settings:
 
 ```
